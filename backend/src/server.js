@@ -16,13 +16,13 @@ const __dirname = path.resolve()
 
 
 //middleware, auth check is best example
-if (process.env.NODE_ENV !== "production"){
-    app.use(
-        cors({
-            origin: "http://localhost:5173",
-        })
-    );
-}; 
+if (process.env.NODE_ENV !== "production") {
+  app.use(
+    cors({
+      origin: "http://localhost:5173",
+    })
+  );
+}
 // cors needs to be above the rateLimiter
 
 app.use(express.json()),
